@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Arcade — мини-игры</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-glow"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✦</span> DEMO<span>ARCADE</span></a>
+    <nav>
+      <a class="active" href="#games">Игры</a>
+      <a href="#about">О проекте</a>
+    </nav>
+    <div class="points-pill"><span>★</span> <b id="headerPoints">0</b> очков</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> ИГРОВАЯ ЗОНА</div>
+        <h1>Играй. Думай.<br><em>Побеждай.</em></h1>
+        <p>Небольшая коллекция мини-игр для отдыха и хорошего настроения. Только очки и веселье — никаких ставок и денежных призов.</p>
+        <a class="primary-btn" href="#games">Выбрать игру <span>↘</span></a>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="spark spark-a">✦</div><div class="spark spark-b">✧</div>
+        <div class="hero-tile tile-back">♠</div>
+        <div class="hero-tile tile-front"><span>✦</span><strong>PLAY</strong><small>YOUR WAY</small></div>
+        <div class="float-chip chip-one">+10</div><div class="float-chip chip-two">★</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><span class="stat-icon">🎮</span><div><b>3</b><small>мини-игры</small></div></div>
+      <div><span class="stat-icon">⭐</span><div><b id="totalPoints">0</b><small>твоих очков</small></div></div>
+      <div><span class="stat-icon">⚡</span><div><b>100%</b><small>для развлечения</small></div></div>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <div><div class="eyebrow">ВЫБИРАЙ СВОЁ</div><h2>Популярные игры</h2></div>
+        <span class="section-note">Три способа проверить себя</span>
+      </div>
+      <div class="game-grid">
+        <article class="game-card">
+          <div class="game-visual memory-visual"><span class="visual-symbol">◆</span><span class="visual-mini">MEMORY</span><div class="mini-cards"><i>?</i><i>?</i><i>?</i></div></div>
+          <div class="card-content"><div class="card-meta"><span>ЛОГИКА</span><span>01 / 03</span></div><h3>Найди пару</h3><p>Запоминай карточки и открывай одинаковые символы.</p><button class="play-btn" data-game="memory">Играть <span>→</span></button></div>
+        </article>
+        <article class="game-card">
+          <div class="game-visual reaction-visual"><span class="visual-symbol">⚡</span><span class="visual-mini">REACTION</span><div class="reaction-circle">GO!</div></div>
+          <div class="card-content"><div class="card-meta"><span>СКОРОСТЬ</span><span>02 / 03</span></div><h3>Проверь реакцию</h3><p>Дождись сигнала и нажми на кнопку как можно быстрее.</p><button class="play-btn" data-game="reaction">Играть <span>→</span></button></div>
+        </article>
+        <article class="game-card">
+          <div class="game-visual number-visual"><span class="visual-symbol">⌁</span><span class="visual-mini">NUMBER</span><div class="number-art">?</div></div>
+          <div class="card-content"><div class="card-meta"><span>СООБРАЗИТЕЛЬНОСТЬ</span><span>03 / 03</span></div><h3>Угадай число</h3><p>Найди загаданное число от 1 до 20 за несколько попыток.</p><button class="play-btn" data-game="number">Играть <span>→</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about"><div class="about-icon">✦</div><div><h3>Просто играй в своё удовольствие</h3><p>Очки нужны только для личного рекорда. Здесь нет ставок, покупок, денежных выигрышей или обмена очков на призы.</p></div></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">✦</span> DEMO<span>ARCADE</span></a><span>Учебный игровой проект · 2026</span></footer>
+
+  <div class="modal hidden" id="gameModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-panel">
+      <button class="close-btn" id="closeModal" aria-label="Закрыть">×</button>
+      <div class="eyebrow">МИНИ-ИГРА</div>
+      <h2 id="modalTitle">Игра</h2>
+      <div id="gameArea"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
